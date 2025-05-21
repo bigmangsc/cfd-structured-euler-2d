@@ -482,11 +482,11 @@ def monitor():
     resavg       = np.mean(abs(res[0,:,:]))
 
     if (t % 10 == 0):
-        print ' step', '%10s' % 'avg.res', '%10s' % 'max.res', \
-                       '%11s' % 'x',       '%11s' % 'y'
+        print(' step', '%10s' % 'avg.res', '%10s' % 'max.res', 
+                       '%11s' % 'x',       '%11s' % 'y')
 
-    print '%5d' % t, '%.4e' % resavg,        '%.4e' % resmax, \
-                     '%+.4e' % x[imax,jmax], '%+.4e' % y[imax,jmax]
+    print('%5d' % t, '%.4e' % resavg,        '%.4e' % resmax, 
+                     '%+.4e' % x[imax,jmax], '%+.4e' % y[imax,jmax])
     reslist.append(resmax)
 
     if (t % plot_interval == 0):
